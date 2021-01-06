@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30711.63
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dan.SqlBuilder", "dan.SqlBuilder\dan.SqlBuilder.csproj", "{F83EED5B-CF5F-425E-BC34-232D67A7C032}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dan.UnitTest", "dan.UnitTest\dan.UnitTest.csproj", "{91E5B1E8-04C7-4BDB-84DC-19CD6B1FEFD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dan.UnitTest", "dan.UnitTest\dan.UnitTest.csproj", "{91E5B1E8-04C7-4BDB-84DC-19CD6B1FEFD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dan.SqlObjectMapper", "dan.SqlObjectMapper\dan.SqlObjectMapper.csproj", "{8346ABF1-9F97-4EE1-BBC9-52C6144D411B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{91E5B1E8-04C7-4BDB-84DC-19CD6B1FEFD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91E5B1E8-04C7-4BDB-84DC-19CD6B1FEFD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91E5B1E8-04C7-4BDB-84DC-19CD6B1FEFD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8346ABF1-9F97-4EE1-BBC9-52C6144D411B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8346ABF1-9F97-4EE1-BBC9-52C6144D411B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8346ABF1-9F97-4EE1-BBC9-52C6144D411B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8346ABF1-9F97-4EE1-BBC9-52C6144D411B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

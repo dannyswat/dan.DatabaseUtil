@@ -16,7 +16,7 @@ The next milestone is to make the library more user friendly with builder patter
 		.Select(
 			new DbField("Name", "p1"),
 			new DbField("Id", "p1"),
-			new SelectField(new RowNumberField().Order(new SortField(new DbField("Id", "p1"))), "RowNum")
+			new RowNumberField().Order(new DbField("Id", "p1"))
 		)
 		.Take(100)
 		.Build();

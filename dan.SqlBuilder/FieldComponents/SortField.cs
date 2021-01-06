@@ -4,7 +4,7 @@ using System.Text;
 
 namespace dan.SqlBuilder
 {
-    public class SortField : ISqlComponent
+    public partial class SortField : ISqlComponent
     {
         public SortField(string field, bool desc = false)
         {

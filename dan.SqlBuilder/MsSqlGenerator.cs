@@ -140,7 +140,25 @@ namespace dan.SqlBuilder
 
         public void Visit(ArrayField component)
         {
-            sql.Append("(" + string.Join(", ", component.Data) + ")");
+            if (component.Data.Count == 0)
+                throw new ArgumentException("Empty in array field");
+
+            string startEncloser = "";
+            string endEncloser = "";
+            if (component.DataType?.IsNumericType() == true)
+			{
+
+			}
+            else if (component.DataType == typeof(Guid))
+			{
+                startEncloser = endEncloser = "'";
+			}
+            else
+			{
+                startEncloser = "N'";
+                endEncloser = "'";
+			}
+            sql.Append("(" + startEncloser + string.Join(endEncloser + ", " + startEncloser, component.Data) + endEncloser + ")");
         }
 
         public void Visit(BetweenField component)

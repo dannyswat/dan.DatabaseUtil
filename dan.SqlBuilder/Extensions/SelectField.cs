@@ -10,5 +10,10 @@ namespace dan.SqlBuilder
 		{
 			return new SelectField(value);
 		}
+
+		public static implicit operator SelectField(RowNumberField value)
+		{
+			return new SelectField(value, RowNumberField.DefaultAlias);
+		}
 	}
 }

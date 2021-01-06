@@ -6,6 +6,8 @@ namespace dan.SqlBuilder
 {
     public class RowNumberField : ISqlField
     {
+        public const string DefaultAlias = "RowNum";
+
         public List<SortField> PartitionBy { get; set; } = new List<SortField>();
 
         public List<SortField> OrderBy { get; set; } = new List<SortField>();

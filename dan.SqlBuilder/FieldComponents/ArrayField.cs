@@ -6,31 +6,34 @@ namespace dan.SqlBuilder
 {
 	public class ArrayField : ISqlField, ISqlTable
 	{
-		public ArrayField(IEnumerable<int> data)
+		public ArrayField(params int[] data)
 		{
 			foreach (var item in data)
 				Data.Add(item);
+
+			DataType = typeof(int);
 		}
 
-		public ArrayField(IEnumerable<string> data)
+		public ArrayField(params string[] data)
+		{
+			Data.AddRange(data);
+
+			DataType = typeof(string);
+		}
+
+		public ArrayField(params Guid[] data)
 		{
 			foreach (var item in data)
 				Data.Add(item);
+
+			DataType = typeof(Guid);
 		}
 
 		public List<object> Data = new List<object>();
 
+		public Type DataType { get; private set; }
+
 		string ISqlTable.Alias { get => null; set { } }
-
-		public static implicit operator ArrayField(int[] data)
-		{
-			return new ArrayField(data);
-		}
-
-		public static implicit operator ArrayField(string[] data)
-		{
-			return new ArrayField(data);
-		}
 
 		public void Accept(ISqlComponentVisitor visitor)
 		{
